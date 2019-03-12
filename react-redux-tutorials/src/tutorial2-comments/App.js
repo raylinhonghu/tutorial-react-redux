@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import faker from 'faker';
+import ApprovalCard from './approval';
+import ApprovalCard2 from './approval-children';
+import Comment2 from './comment2';
+
 
 var Comment1 = () => {
     return (
@@ -18,45 +22,30 @@ var Comment1 = () => {
     )
 }
 
-var Comment2 = () => {
-    return (
-        <div className="ui container comments">
-            <div className="comment">
-                <a href="/" className="avatar">
-                    <img alt="avatar" src={faker.image.avatar()} />
-                </a>
-
-                <div className="content">
-                    <a href="/" className="author">
-                        {faker.finance.accountName()}
-                    </a>
-                    <div className="metadata">
-                        <span className="date">
-                            {faker.date.past().toLocaleDateString()}
-                        </span>
-                    </div>
-                    <div className="text">
-                        {faker.lorem.sentence()}
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
-}
-
 class App extends Component {
-
 
     render() {
         return (
             <div>
-                {/* <Comment1 />
-              <Comment1 />
-              <Comment1 /> */}
-
-              <Comment2 />
-              <Comment2 />
-              <Comment2 />
+                <div className="ui cards">
+                    <ApprovalCard author={faker.finance.accountName()}
+                        time={faker.date.past().toLocaleDateString()}
+                        sentence={faker.lorem.sentence()}
+                        avatar={faker.image.avatar()}
+                    />
+                    <ApprovalCard author={faker.finance.accountName()}
+                        time={faker.date.past().toLocaleDateString()}
+                        sentence={faker.lorem.sentence()}
+                        avatar={faker.image.avatar()}
+                    />
+                    <ApprovalCard2>
+                        <Comment2 author={faker.finance.accountName()}
+                        time={faker.date.past().toLocaleDateString()}
+                        sentence={faker.lorem.sentence()}
+                        avatar={faker.image.avatar()}
+                        />
+                    </ApprovalCard2>
+                </div>
             </div>
         );
     }
