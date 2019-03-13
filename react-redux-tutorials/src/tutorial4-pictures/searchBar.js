@@ -33,8 +33,6 @@ class SearchBar extends React.Component {
                 <form className="ui form" onSubmit={this.onFormSubmit}>
                     <div className="field">
                         <label>Image Search</label>
-                        {/* <input type="text" placeholder="Enter Text" onChange={(e) => this.onChange(e)} /> */}
-                        {/* <input type="text" placeholder="Enter Text" onChange={this.onChange} /> */}
                         <input
                             type="text"
                             placeholder="Enter Some Text"
