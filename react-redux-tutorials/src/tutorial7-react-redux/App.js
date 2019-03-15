@@ -3,7 +3,7 @@ import SongList from './component/SongList';
 
 const App = () => {
     return(
-        <div>
+        <div className="ui grid container">
             <SongList />
         </div>
     )
