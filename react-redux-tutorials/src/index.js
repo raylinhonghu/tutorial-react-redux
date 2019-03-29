@@ -5,7 +5,7 @@ import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 
 import './index.css';
-import App from './tutorial10-context2/App';
+import App from './tutorial12-weatherHooks/App';
 import reducer from './tutorial8-redux-thunk/reducer';
 import * as serviceWorker from './serviceWorker';
 
